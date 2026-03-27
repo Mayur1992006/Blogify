@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>Signup</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+        <div class="container mt-4">
+            <form action="/user/signup" method="post">
+                <div class="container mt-5" style="max-width: 500px;">
+                    <div class="card p-4 shadow rounded-4">
+
+                        <h3 class="text-center mb-3">Create Account</h3>
+
+                        <form action="/user/signup" method="post">
+
+                            <div class="mb-3">
+                                <label>Full Name</label>
+                                <input type="text" name="fullName" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Email</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Password</label>
+                                <input type="password" name="password" class="form-control" required>
+                            </div>
+
+                            <button class="btn btn-dark w-100">Sign Up</button>
+
+                            <p class="text-center mt-3">
+  Already have an account? <a href="/user/signin">Login</a>
+</p>
+
+                        </form>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <%- include('./partials/scripts') %>
+</body>
+
+</html>
